@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+    <name>Shameem_Cssoptim</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="https://opensource.org/licenses/MIT">"The MIT License (MIT)"</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The extension will allow you to overcome the Google "PageSpeed Insights" warning: "optimize css delivery"</summary>
+    <description>The extension will allow you to overcome the Google "PageSpeed Insights" warning: "optimize css delivery" https://developers.google.com/speed/docs/insights/OptimizeCSSDeliveryIt will improve the CSS delivery by including only the required css rules for each of your magento pages. A database of the required rules for each pages is created, growing larger based on the pages that your customers accesses.</description>
+    <authors><author><name>Shameem Reza</name><user>adaptcoder</user><email>adaptcoder@gmail.com</email></author></authors>
+    <date>2015-10-20</date>
+    <time>03:40:35</time>
+    <contents><target name="magecommunity"><dir name="Shameem"><dir name="Cssoptim"><dir name="sql"><dir name="cssoptim_setup"><file name="install-1.0.0.php" hash="81fee0cd790396f3ea1730c7b097b0df"/></dir></dir><dir name="Helper"><file name="Data.php" hash="0a891d0431b105c1fd9eb8ada85f98bc"/></dir><dir name="etc"><file name="system.xml" hash="d3aa282dbcd5f2a9a2b46c346d956f07"/><file name="config.xml" hash="4f9926f8d456ca686b03a67e4ccf2ead"/></dir><dir name="Model"><dir name="Resource"><dir name="CssSuggest"><file name="Collection.php" hash="f02ff399afa3ea1c45269d0a19a02460"/></dir><file name="CssSuggest.php" hash="ffe4ebac891f85e583150ecfa5e7e206"/><dir name="CssOptim"><file name="Collection.php" hash="1e62b904710b3802a3cf4199d8ec853a"/></dir><file name="CssOptim.php" hash="4a9803dbecef65fba2d87858741eb39e"/></dir><file name="CssSuggest.php" hash="8b2aad2779e69d9f24f1abc32874dafc"/><file name="Observer.php" hash="5ed88c856beadb8c21ab7f39359b44c9"/><file name="CssOptim.php" hash="07b9f66562d4b5ce532ee7695062ba99"/></dir><dir name="controllers"><file name="IndexController.php" hash="8cd6b0a872e43941f02e0c12f15514e8"/></dir><dir name="Block"><file name="Afterdocument.php" hash="6a5756d600d505254090866de42ff2cf"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Shameem_Cssoptim.xml" hash="2420787cba78a1c2e2af3ef69f773d06"/></dir></target><target name="mageweb"><dir name="js"><file name="restractor.js" hash="bbfb5169b859f26ba93c4336c37057b0"/><file name="restractor.min.js" hash="3fd176664c133caf6a0984efab10157b"/><file name="jquery-1.11.1.min.js" hash="8101d596b2b8fa35fe3a634ea342d7c3"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>4.0.0</min><max>5.6.20</max></php></required></dependencies>
+</package>

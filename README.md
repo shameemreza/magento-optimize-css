@@ -12,3 +12,6 @@ A database of the required rules for each pages is created, growing larger based
 
 
 Please note that this extension is provided as is. It is recommended to always backup your installation prior to use.
+
+
+![Pagespeed Optimize Css Delivery](/feature.jpg "Shameem")

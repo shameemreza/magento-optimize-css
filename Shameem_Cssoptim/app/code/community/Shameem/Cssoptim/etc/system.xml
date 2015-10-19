@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @package     Shameem_Cssoptim
+ * @author      Shameem Reza
+ * @copyright   2015
+ * @email       adaptcoder@gmail.com
+ * @license     https://opensource.org/licenses/MIT
+ */
+
+-->
+
+<config>
+    <tabs>
+        <cssoptim translate="label" module="core">
+            <label>Css Optim</label>
+            <sort_order>100</sort_order>
+        </cssoptim>
+    </tabs>
+    <sections>
+        <cssoptim>
+            <label>Css Optim</label>
+            <tab>cssoptim</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general>
+                    <label>Catalog</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>18</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[]]></comment>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>If you want to enable css optim</comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                        <minimal_matches translate="label">
+                            <label>minimlal matches</label>
+                            <comment><![CDATA[
+                                Minimumn amount of matches required to set an optimized 
+                                css as valid for a specific page
+                            ]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </minimal_matches>
+                        <required_before_all translate="label comment">
+                            <label>Required Before all CSS in all pages</label>
+                            <comment>this is the required css in all pages.</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </required_before_all>
+                        <required_after_all translate="label comment">
+                            <label>Required After all CSS in all pages</label>
+                            <comment>this is the required css in all pages.</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </required_after_all>
+                    </fields>
+                </general>
+            </groups>
+        </cssoptim>
+    </sections>
+</config>

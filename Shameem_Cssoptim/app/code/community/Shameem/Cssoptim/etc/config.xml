@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @package     Shameem_Cssoptim
+ * @author      Shameem Reza
+ * @copyright   2015
+ * @email       adaptcoder@gmail.com
+ * @license     https://opensource.org/licenses/MIT
+ */
+
+-->
+
+<config>
+    <modules>
+        <Shameem_Cssoptim>
+            <version>1.0.0</version>
+        </Shameem_Cssoptim>
+    </modules>
+    <global>
+        <events>
+        </events>
+
+        <blocks>
+            <cssoptim>
+                <class>Shameem_Cssoptim_Block</class>
+            </cssoptim>
+        </blocks>
+
+        <models>
+            <cssoptim>
+                <class>Shameem_Cssoptim_Model</class>
+                <resourceModel>cssoptim_resource</resourceModel>
+            </cssoptim>
+            <cssoptim_resource>
+                <class>Shameem_Cssoptim_Model_Resource</class>
+                <entities>
+                    <cssSuggest>
+                        <table>cssoptim_css_suggest</table>
+                    </cssSuggest>
+                    <cssOptim>
+                        <table>cssoptim_css_optim</table>
+                    </cssOptim>
+                </entities>
+            </cssoptim_resource>
+        </models>
+        <cache>
+            <types>
+                <cssoptim translate="label,description" module="cssoptim">
+                    <label><![CDATA[Cssoptim]]></label>
+                    <description><![CDATA[Css Optim]]></description>
+                    <tags><![CDATA[CSSOPTIM]]></tags>
+                </cssoptim>
+            </types>
+        </cache>
+        <helpers>
+            <cssoptim>
+                <class>Shameem_Cssoptim_Helper</class>
+            </cssoptim>
+        </helpers>
+        <resources>
+            <cssoptim_setup>
+                <setup>
+                    <module>Shameem_Cssoptim</module>
+                </setup>
+            </cssoptim_setup>
+        </resources>
+        <events>
+            <adminhtml_cache_refresh_type>
+                <observers>
+                    <cssoptim>
+                        <type>singleton</type>
+                        <class>cssoptim/observer</class>
+                        <method>cacheRefreshType</method>
+                    </cssoptim>
+                </observers>
+            </adminhtml_cache_refresh_type>
+            <application_clean_cache>
+                <observers>
+                    <cssoptim>
+                        <type>singleton</type>
+                        <class>cssoptim/observer</class>
+                        <method>applicationCleanCache</method>
+                    </cssoptim>
+                </observers>
+            </application_clean_cache>
+            <adminhtml_cache_flush_all>
+                <observers>
+                    <cssoptim>
+                        <type>singleton</type>
+                        <class>cssoptim/observer</class>
+                        <method>adminhtmlCacheFlushAll</method>
+                    </cssoptim>
+                </observers>
+            </adminhtml_cache_flush_all>
+        </events>
+    </global>
+    <adminhtml>
+    </adminhtml>
+    <frontend>
+        <events>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <cssoptim>
+                        <type>singleton</type>
+                        <class>cssoptim/observer</class>
+                        <method>blockToHtmlAfter</method>
+                    </cssoptim>
+                </observers>
+            </core_block_abstract_to_html_after>
+        </events>
+        <routers>
+            <cssoptim>
+                <use>standard</use>
+                <args>
+                    <module>Shameem_Cssoptim</module>
+                    <frontName>cssoptim</frontName>
+                </args>
+            </cssoptim>
+        </routers>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <cssoptim translate="title">
+                                            <title>Css Optim Configuration</title>
+                                            <sort_order>20</sort_order>
+                                            <children>
+                                                <items translate="title">
+                                                    <title>Manage Methods</title>
+                                                </items>
+                                            </children>
+                                        </cssoptim>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <default>
+        <cssoptim>
+            <general>
+                <enabled>0</enabled>
+                <minimal_matches>1</minimal_matches>
+            </general>
+        </cssoptim>
+    </default>
+</config>
