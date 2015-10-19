@@ -1,3 +1,5 @@
+// Shameem Reza
+
 (function ($, MAGEURL) {
     var baseAjaxUrl = MAGEURL,
         baseResourceUrl = MAGEURL.replace(/index\.php\/$/, '');
