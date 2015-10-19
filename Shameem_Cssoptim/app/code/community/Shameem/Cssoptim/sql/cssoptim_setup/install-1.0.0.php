@@ -19,6 +19,7 @@ $installer->startSetup();
 /**
  * Create table 'Css Suggest'
  */
+ 
 $table = $installer->getConnection()
     ->newTable($installer->getTable('cssoptim/cssSuggest'))
     ->addColumn('css_suggest_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
@@ -41,6 +42,7 @@ $installer->getConnection()->createTable($table);
 /**
  * Create table 'Css Optim'
  */
+ 
 $table = $installer->getConnection()
     ->newTable($installer->getTable('cssoptim/cssOptim'))
     ->addColumn('css_optim_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
